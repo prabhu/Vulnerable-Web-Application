@@ -1,0 +1,8 @@
+{
+    "require": {
+        "quickbooks/v3-php-sdk": "v4.0.6.1",
+        "barrelstrength/sprout-base-email": "1.2.6",
+        "barrelstrength/sprout-forms": "3.8.8",
+        "phpmailer/phpmailer": "5.2.10"
+    }
+}

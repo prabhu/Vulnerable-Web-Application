@@ -1,0 +1,14 @@
+{
+    "/src/web/assets/address/dist/js/addressfield.js": "/src/web/assets/address/dist/js/addressfield.js",
+    "/src/web/assets/address/dist/css/addressfield.css": "/src/web/assets/address/dist/css/addressfield.css",
+    "/src/web/assets/email/dist/css/emailfield.css": "/src/web/assets/email/dist/css/emailfield.css",
+    "/src/web/assets/phone/dist/css/phonefield.css": "/src/web/assets/phone/dist/css/phonefield.css",
+    "/src/web/assets/selectother/dist/css/select-other.css": "/src/web/assets/selectother/dist/css/select-other.css",
+    "/src/web/assets/url/dist/css/urlfield.css": "/src/web/assets/url/dist/css/urlfield.css",
+    "/src/web/assets/email/dist/js/emailfield.js": "/src/web/assets/email/dist/js/emailfield.js",
+    "/src/web/assets/phone/dist/js/phonefield.js": "/src/web/assets/phone/dist/js/phonefield.js",
+    "/src/web/assets/regularexpression/dist/js/regularexpressionfield.js": "/src/web/assets/regularexpression/dist/js/regularexpressionfield.js",
+    "/src/web/assets/selectother/dist/js/selectotherfield.js": "/src/web/assets/selectother/dist/js/selectotherfield.js",
+    "/src/web/assets/url/dist/js/urlfield.js": "/src/web/assets/url/dist/js/urlfield.js",
+    "/lib/craftcms-sass/_mixins.scss": "/lib/craftcms-sass/_mixins.scss"
+}

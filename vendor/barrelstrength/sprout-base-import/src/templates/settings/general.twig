@@ -1,0 +1,17 @@
+{% requireAdmin %}
+
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    label: "Plugin Name"|t('sprout-base-import'),
+    instructions: "Intuitive, human-readable plugin name for the end user."|t('sprout-base-import'),
+    id: 'pluginNameOverride',
+    name: 'pluginNameOverride',
+    value: settings.pluginNameOverride,
+    placeholder: 'Sprout Import',
+    autofocus: true,
+    first: true,
+    errors: ''
+}) }}
+
+

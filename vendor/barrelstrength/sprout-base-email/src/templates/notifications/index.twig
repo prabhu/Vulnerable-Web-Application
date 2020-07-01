@@ -1,0 +1,34 @@
+{% requirePermission viewNotificationsPermission %}
+
+{% extends "sprout-base-email/_layouts/elementindex" %}
+
+{% set title = "Notification Email"|t('sprout-base-email') %}
+{% set elementType = 'barrelstrength\\sproutbaseemail\\elements\\NotificationEmail' %}
+
+{% block actionButton %}
+    <div class="buttons">
+        <a class="btn submit add icon"
+            href="{{ cpUrl(notificationEmailBaseUrl ~ 'edit/new') }}">
+            {{ "New Notification"|t('sprout-base-email') }}
+        </a>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    {{ parent() }}
+
+    {% include "sprout-base-email/_modals/base" %}
+
+{% endblock %}
+
+{% block initJs %}
+    {{ parent() }}
+
+    {% if hideSidebar %}
+        $('#main-content').removeClass('has-sidebar');
+        $('#sidebar-toggle-container').remove();
+        $('#sidebar-container').remove();
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textareaField({
+    label: 'Field Format'|t('sprout-base-fields'),
+    name: 'fieldFormat',
+    instructions: 'What the auto-generated field value should look like. You can include tags that output element properties, such as {myCustomField}.'|t('sprout-base-fields'),
+    placeholder: 'Reference the Element you are saving using the `object` variable:
+Object syntax: {{ object.title }}
+Shorthand syntax: {title}'|t('sprout-base-fields'),
+    value: field.fieldFormat,
+    rows: 10,
+    class: 'code'
+}) }}
+
+{{ forms.lightswitchField({
+    label: "Show Field"|t('sprout-base-fields'),
+    instructions: "Display this field in the field layout."|t('sprout-base-fields'),
+    id: 'showField',
+    name: 'showField',
+    on: field.showField,
+    toggle: 'sproutfields-predefined-display-settings'
+}) }}
+
+<div id="sproutfields-predefined-display-settings" {% if not field.showField %}class="hidden"{% endif %}>
+
+    {{ forms.selectField({
+        label: 'Output Format'|t('sprout-base-fields'),
+        instructions: "The format to use when displaying the Predefined Field value in the field layout."|t('sprout-base-fields'),
+        id: "outputFormat",
+        name: 'outputFormat',
+        options: {
+            singleLine: 'Plain Text'|t('sprout-base-fields'),
+            textarea: 'Textarea'|t('sprout-base-fields'),
+            html: 'HTML'|t('sprout-base-fields')
+        },
+        value: field.outputFormat
+    }) }}
+
+    {{ forms.lightswitchField({
+        label: "Render dynamically in field layout"|t('sprout-base-fields'),
+        instructions: "Process the Predefined Field value dynamically in the field layout. Enabling this setting will process the value defined by Field Format each time the Field Layout is loaded."|t('sprout-base-fields'),
+        id: 'renderDynamically',
+        name: 'renderDynamically',
+        on: field.renderDynamically,
+        warning: "Enable this setting with caution. Adding additional processing when loading a field layout can have side effects on performance and usability."|t('sprout-base-fields'),
+    }) }}
+
+</div>
+
+<br>

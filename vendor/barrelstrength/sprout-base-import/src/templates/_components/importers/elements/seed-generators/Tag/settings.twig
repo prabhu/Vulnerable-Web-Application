@@ -1,0 +1,11 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.selectField({
+    label: "Tag Group"|t('sprout-base-import'),
+    instructions: "The tag group to import content."|t('sprout-base-import'),
+    required: true,
+    name: "tagGroup",
+    options: [{label: "Select a group..."|t('sprout-base-import'), value: null}]|merge(tagGroups),
+    value: seedJob.settings.tagGroup ?? null,
+    errors: seedJob.getErrors('tagGroup') ?? null
+}) }}

@@ -1,0 +1,29 @@
+{
+  "name": "barrelstrength/sprout-base-email",
+  "description": "Common email libraries for Sprout Plugins for Craft CMS",
+  "version": "1.2.6",
+  "type": "yii-module",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Barrel Strength",
+      "homepage": "https://www.barrelstrengthdesign.com/"
+    }
+  ],
+  "support": {
+    "email": "sprout@barrelstrengthdesign.com",
+    "issues": "https://github.com/barrelstrength/sprout-base/issues?state=open",
+    "source": "https://github.com/barrelstrength/sprout-base",
+    "docs": "https://github.com/barrelstrength/sprout-base",
+    "rss": "https://github.com/barrelstrength/sprout-base/commits/v2.atom"
+  },
+  "require": {
+    "craftcms/cms": "^3.4.0",
+    "league/html-to-markdown": "^4.6.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "barrelstrength\\sproutbaseemail\\": "src/"
+    }
+  }
+}
